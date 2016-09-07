@@ -3,7 +3,7 @@
 using Mosa.Kernel.x86;
 using Mosa.Runtime.Plug;
 
-namespace Mosa.BootLoader.x86
+namespace ShiftOS
 {
 	/// <summary>
 	///
@@ -32,7 +32,7 @@ namespace Mosa.BootLoader.x86
 			IDT.Setup();
 			GDT.Setup();
 
-			Runtime.Internal.Setup();
+            Mosa.Runtime.Internal.Setup();
 
 			IDT.SetInterruptHandler(ProcessInterrupt);
 
